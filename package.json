@@ -1,0 +1,23 @@
+{
+  "name": "git_playwright_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aashi21996/GIT_PLAYWRIGHT_AUTOMATION.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aashi21996/GIT_PLAYWRIGHT_AUTOMATION/issues"
+  },
+  "homepage": "https://github.com/aashi21996/GIT_PLAYWRIGHT_AUTOMATION#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5"
+  }
+}
