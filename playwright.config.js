@@ -9,6 +9,8 @@ export default defineConfig({
   },
   use:{
     headless:false,
+    screenshot: 'on',
+    trace: 'on',
   },
   projects: [
      {

@@ -15,7 +15,7 @@ test('First test case', async ({page})=>{
 
   await page.goto("https://www.google.com/");
   console.log(await page.title());
-  await expect (page).toHaveTitle("Google");                    //assertion
+  await expect (page).toHaveTitle("Google");                    
 });
 
 
