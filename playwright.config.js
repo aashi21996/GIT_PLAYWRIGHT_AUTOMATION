@@ -11,17 +11,32 @@ export default defineConfig({
     headless:false,
     screenshot: 'on',
     trace: 'on',
+    viewport: { width: 1920, height: 1080 },
   },
   projects: [
      {
       browserName: 'chromium',
     },
 
-    {
+    /*{
       browserName: 'firefox',
-    },
- 
-  ],
+        use: { ...devices['Desktop Firefox'] },
 
-});
+    },*/
+ 
+  
+  //Mobile Viewports (Mobile Screens):
+
+ /*{
+  name: 'Mobile Chrome',
+  use: { ...devices['Pixel 5'] },
+ },
+{
+   name: 'Mobile Safari',
+  use: { ...devices['iPhone 12'] },
+ },*/
+
+],
+  });
+
 
