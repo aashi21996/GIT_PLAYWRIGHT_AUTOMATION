@@ -11,7 +11,7 @@ export default defineConfig({
     headless:false,
     screenshot: 'on',
     trace: 'on',
-    viewport: { width: 1920, height: 1080 },
+    //viewport: { width: 1920, height: 1080 },
   },
   projects: [
      {
