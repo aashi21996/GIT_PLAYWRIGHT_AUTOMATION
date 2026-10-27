@@ -1,6 +1,6 @@
 const{test,expect}=require('@playwright/test');
 
-test.only('css locator',async ({page})=>{
+test('css locator',async ({page})=>{
     await page.goto("https://www.amazon.in/");
     console.log(await page.title());
 
@@ -16,7 +16,7 @@ test.only('css locator',async ({page})=>{
 });
 
 
-test('css selector imp', async ({page})=>{
+test.only('css selector imp', async ({page})=>{
    await page.goto("https://demoblaze.com/");
 
    const loginButton = page.locator('#login2');
@@ -31,3 +31,12 @@ test('css selector imp', async ({page})=>{
     console.log(await page.locator("a[class*='list']").allTextContents());
 });
 
+test('second test', async ({page}) =>{
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+    await page.locator('#username').fill("aashi");
+    await page.locator('#password').fill("hiii");
+    await page.locator('[name=signin]').click();
+    console.log(await page.locator("[style*='block']").textContent());
+    await expect(page.locator("[style*='block']")).toContainText('Incorrect');
+
+});

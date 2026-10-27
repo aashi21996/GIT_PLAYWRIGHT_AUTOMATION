@@ -5,7 +5,7 @@ export default defineConfig({
   reporter: 'html',
   timeout: 40000,
   expect:{
-    timeout: 40000,
+    timeout: 20000,
   },
   use:{
     headless:false,
