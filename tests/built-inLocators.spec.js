@@ -13,12 +13,20 @@ test('buit-in locator', async ({page}) =>{
     await page.locator("//input[@role='searchbox']").fill("");
     await page.getByPlaceholder('Search Amazon.in').fill("mobile");
 
+
 });
 
-test.only('buit-in locators', async ({page}) =>{
+test('buit-in locators', async ({page}) =>{
     await page.goto("https://developer.salesforce.com/signup");
     const logoImage = page.getByAltText("Salesforce Home").filter({ visible: true });
     
     await expect(logoImage).toBeVisible();
     await logoImage.click();
 });
+
+test('buit-in locator 3', async ({page}) =>{
+    await page.goto("https://parabank.parasoft.com/parabank/lookup.htm");
+    await page.getByTitle("ParaBank").click();
+});
+
+//getByTestId
