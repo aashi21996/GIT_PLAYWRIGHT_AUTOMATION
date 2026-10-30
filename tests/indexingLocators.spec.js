@@ -32,7 +32,6 @@ test('practice indexing',async ({page})=>{
     await page.locator('#userPassword').fill("Aashi@14");
     await page.locator('[value=Login]').click();
 
-   //await page.waitForLoadState('networkidle');     unreliable
    await page.locator('.card-body b').first().waitFor();
    const title =await page.locator('.card-body b').allTextContents();
    console.log(title);
