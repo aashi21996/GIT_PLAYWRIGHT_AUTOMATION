@@ -17,5 +17,4 @@ test.only('Radio button and checkbox', async ({page}) =>{
     expect(await page.locator("#terms").uncheck().isChecked).toBeFalsy();
     await signin.click();
 
-
 });
