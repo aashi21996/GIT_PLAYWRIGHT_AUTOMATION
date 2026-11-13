@@ -17,6 +17,7 @@ test.only('Manual waiting',async ({page})=>{
     await page.goto('https://demoqa.com/automation-practice-form');
 
     test.setTimeout(60000);
+    //test.slow(); //90s= 3 time of default time
     await expect(page).toHaveURL('https://demoqa.com/automation-practice-form');
     await expect(page).toHaveTitle('demosite');
     await expect(page.locator('#submit')).toBeVisible({timeout:10000});
