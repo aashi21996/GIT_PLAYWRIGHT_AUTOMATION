@@ -6,7 +6,13 @@ export default defineConfig({
   timeout: 40000,
   expect:{
     timeout: 20000,
+    
   },
+  //actionTimeout: 5000,
+  //navigationTimeout: 15000,
+  // globalTimeout: 300000,
+
+
   use:{
     headless:false,
     screenshot: 'on',
