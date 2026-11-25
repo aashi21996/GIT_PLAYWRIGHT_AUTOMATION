@@ -1,0 +1,27 @@
+const {test,chromium,expect} = require('@playwright/test');
+
+
+    test('Test1@sanity',async({page})=>{
+     
+        console.log("this is test1")
+    })
+
+    test('Test2@sanity',async({page})=>{
+     
+        console.log("this is test2")
+    })
+
+    test('Test3@reg',async({page})=>{
+     
+        console.log("this is test3")
+    })
+
+    test('Test4@reg',async({page})=>{
+     
+        console.log("this is test4")
+    })
+
+    test('Test5@sanity@reg',async({page})=>{
+     
+        console.log("this is test5")
+    })
