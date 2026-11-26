@@ -1,18 +1,18 @@
 const {test,chromium,expect} = require('@playwright/test');
 
-test.only('Test 1',async({page})=>{
+test.only('Test 1',async()=>{
 
     console.log("this is test 1");
 
     })
 
-test.skip('Test 2',async({page})=>{
+test.skip('Test 2',async()=>{
 
     console.log("this is test 2");
 
     })
 
-test('Test 3',async({page,browserName})=>{
+test('Test 3',async({browserName})=>{
 
     console.log("this is test 3");
     if(browserName==="chromium")
@@ -22,14 +22,14 @@ test('Test 3',async({page,browserName})=>{
 
     })  
 
-    test('Test 4',async({page})=>{
+    test('Test 4',async()=>{
       
          test.fixme()
          console.log("this is test 4");
 
     })
 
-    test('Test 5',async({page})=>{                  //used for negative testing
+    test('Test 5',async()=>{                  //used for negative testing
 
          test.fail()
          console.log("this is test 5");
@@ -37,7 +37,7 @@ test('Test 3',async({page,browserName})=>{
 
     })
 
-    test('Test 6',async({page,browserName})=>{              
+    test('Test 6',async({browserName})=>{              
 
         console.log("this is test 6");
         if(browserName==='firefox')
@@ -47,7 +47,7 @@ test('Test 3',async({page,browserName})=>{
 
     })
 
-    test('Test 7',async({page,browserName})=>{ 
+    test('Test 7',async({page})=>{ 
 
         test.slow();
         console.log("this is test 7");
