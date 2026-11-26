@@ -6,17 +6,19 @@ test('Frame Handling', async ({ page }) => {
 
     const allframes=await page.frames();
     console.log('Number of frames:',allframes.length);    //total frames 
+    expect(allframes.length).toBeGreaterThan(1);
 
     // const var =await page.frame('name');   
     const frame1 = await page.frame({url:'https://ui.vision/demo/webtest/frames/frame_1'})
     await frame1.fill("[name='mytext1']",'Hello')
+    await expect(frame1.locator("[name='mytext1']")).toHaveValue('Hello');
 });
 
-test.only('Frame Handling approch 2', async ({ page }) => {
+test('Frame Handling approch 2', async ({ page }) => {
 
     await page.goto('https://ui.vision/demo/webtest/frames/');
     const inputbox =await page.frameLocator("[src='frame_1.html']").locator("[name='mytext1']");
     await inputbox.fill('hello');
-
+    await expect(inputbox).toHaveValue('hello');
 });
 

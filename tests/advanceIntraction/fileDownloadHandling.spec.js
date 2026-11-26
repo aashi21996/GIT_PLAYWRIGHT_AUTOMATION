@@ -11,8 +11,10 @@ test('File Download',async({page})=>{
 
     const path =await download.path()
     console.log("download temp path :", path)
+    expect(path).toBeTruthy();
 
     await download.saveAs("downloads/myfile.pdf")
     console.log("file saved to:downloads/myfile.pdf ")
 
 })
+

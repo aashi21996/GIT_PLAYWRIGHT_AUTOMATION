@@ -34,6 +34,20 @@ test.only('Handle multiple Windows/Pages',async()=>{
     const newPage= await pagePromise;
     await expect(newPage).toHaveTitle('OrangeHRM: All in One HR Software for Businesses | OrangeHRM')
 
+    // Method 1: Use the existing page1 reference + bringToFront()
+    await page1.bringToFront();
+    await expect(page1).toHaveTitle('OrangeHRM');
+    await page1.locator('[name="username"]').fill('Admin');
+
+    // Method 2: Get page1 from context.pages()
+    const pages = context.pages();
+    const firstPage = pages[0];
+    await firstPage.bringToFront();
+    await expect(firstPage).toHaveTitle('OrangeHRM');
+    await expect(firstPage.locator('[name="username"]')).toHaveValue('Admin');
+
     await browser.close();
      
 })
+
+//return to page method
